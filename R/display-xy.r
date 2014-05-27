@@ -68,7 +68,7 @@ display_xy <- function(center = TRUE, axes = "center", half_range = NULL,
     x <- data %*% proj
     if (center) x <- center(x)
     x <- x / half_range
-    points(x, col = col, pch = pch)
+    points(x, col = col, pch = pch, ...)
 
     if (!is.null(edges)) {
       lines(x[edges, 1], x[edges, 2])
